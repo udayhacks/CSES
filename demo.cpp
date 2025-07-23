@@ -68,60 +68,13 @@ void file_out(){
 
 
 
-int mem(int i ,int k ,vector<int> arr,vector<int> st){
-    if (i == 0 ) {
-        if(st[i] == 1 || st[i]==0 && k >0 ) return arr[i];
-        return 0;
-    }
-
-    int pick = 0;
-    int not_pick = 0 ;
-
-
-
-     if(st[i] == 1 || st[i]==0 && k >0 ) {
-        if (st[i]== 0 ) k--;
-        pick = arr[i]+mem(i-1,k,arr,st);
-     }
-     not_pick = mem(i-1,k,arr,st);
-     return max(pick,not_pick); 
-
-
-
-
-
-
-}
-
 
 int main() {
     file_out();
-
-    //  int  n = 3;
-    // vector<string> passwords = {"password1", "password1", "password1"};
-    //     int k = 2;
-
-    //     map<string,int> track;
-
-    //     for (string &i : passwords){
-    //         if (track[i]<k) {
-    //             track[i]++;
-
-    //             cout<<"ACCEPT\n";
-    //         }
-    //         else{
-    //             cout<<"REJECT\n";
-    //         }
-    //     }
-    //     if (track.find("password0") != track.end())  cout<<"ACCEPT value\n";
-
-
-    vector<int> arr {7,4,3,5};
-    vector<int> sts{ 1,0,0,0};
-    int k = 2;
-    int ans = mem(4,k,arr,sts,);
-    vector<vector<int>>dp(arr.size(),vector<int>(k,-1));
-    cout<<ans;
+    vector<int>arr(7,0);
+    
+    int k = arr.size();
+    cout<<k;
 
 
     
