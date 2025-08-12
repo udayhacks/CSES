@@ -69,6 +69,8 @@ void solution(int n , vector<ll> &arr){
     ll max_freq = 0 ;
     
         sort(arr.begin(), arr.end());
+        // length should always be middle to get minimuim;
+        // then most frequent element
         max_freq  = arr[n/2];
     
     ll ans = 0 ;

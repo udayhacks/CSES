@@ -70,6 +70,12 @@ void solution(int n , int m,
     int i = 0 , j = n-1;
     while(i<j){
         int val = arr[i].first +arr[j].first;
+        // here
+        // we have to take one from beginning and 
+        // one from ending to make value because we have sort the array;
+        // if value exceed then decrease small greedly;
+        // if value decreased then increase large greedly ; 
+        
         if (val == m) {
             cout<< arr[i].second+1 <<" "<< arr[j].second+1<<endl;
             return ;

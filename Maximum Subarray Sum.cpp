@@ -71,6 +71,7 @@ void solution(int n , vector<ll>& arr){
     for(int i =1 ; i<n;i++){
         pre_sum = max(pre_sum+arr[i], arr[i]);
         //here use subarray from starting or taking new one ;
+        // simplely kadanas algorithm ;
 
         max_sum = max(max_sum,pre_sum);
     }
