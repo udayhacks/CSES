@@ -1,0 +1,11 @@
+{
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "cpp": "g++ -std=c++17 -O2 -Wall $fileName -o $fileNameWithoutExt && $fileNameWithoutExt < input.txt"
+    }
+}
+{
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.showExecutionMessage": false
+}

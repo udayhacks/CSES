@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile and Run CP Code",
+            "type": "shell",
+            "options": { "shell": { "executable": "cmd.exe", "args": ["/c"] } },
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-Wall",
+                "${file}",
+                "-o",
+                "${fileDirname}\\a.exe",
+                "&&",
+                "${fileDirname}\\a.exe",
+                "<",
+                "input.txt",
+                ">",
+                "output.txt"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
