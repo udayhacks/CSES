@@ -90,10 +90,31 @@ void solution(int n){
 }
 
 
+
+
+
+
+
+void analy(int n) {
+    vector<int> soliders;
+    for (int i = 1; i <= n; i++) {
+        soliders.push_back(i);
+    }
+
+    for(int i = 0 ;i<soliders.size();i++){
+        if(i % 2 == 1) {
+            cout << soliders[i] << " ";
+        }
+        else{
+            soliders.push_back(soliders[i]);
+        }
+}
+}
+
 int main() {
     file_out();
     int n;
     cin >> n;
-    solution(n);
+    analy(n);
     return 0;
 }
