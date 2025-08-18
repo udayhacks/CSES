@@ -63,10 +63,10 @@ void file_out(){
 
 
 void solution1(int n , vector<int>& arr){
-    vector<int>towers;
+    vector<int>tower;
     //stores the top-values of towers 
     for(int i = 0; i<n;i++){
-        int val; = arr[i];
+        int val = arr[i];
         if (tower.empty() || tower.back() <= val){
             // if not tower is there or existing tower is not suitable create new ;
             tower.push_back(val);

@@ -61,7 +61,13 @@ void file_out(){
 //                              MAIN CODE                                     //
 ////////////////////////////////////////////////////////////////////////////////
 
+/*
 
+    take position
+     if prev element come before than we need xtra round ....... 
+
+
+*/
 
 
 void solution(int n ,vector<int> & arr){

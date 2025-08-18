@@ -67,6 +67,10 @@ void file_out(){
 void solution(){
 
 }
+// solution doc
+// Here main intention is :
+// greedy selection of lowest and highest at that instant 
+// if lowest+highest exceeds then highest alone has to be sent .
 
 
 
@@ -90,6 +94,8 @@ int main() {
         debug(i);
         debug(j);
         debug(g);
+        
+
         if (arr[i]+arr[j] <= c && i != j ) {
             i++;
             j--;

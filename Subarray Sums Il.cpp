@@ -52,6 +52,7 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
 void file_out(){
     #ifndef ONLINE_JUDGE
     freopen("Error.txt", "w", stderr);
+    fastio();
 #endif
 }
 
@@ -64,41 +65,36 @@ void file_out(){
 
 
 
-void solution(int n , vector<ll>&arr){
-    ll coins = 1;
-    // must start with  1;
-    sort(arr.begin(), arr.end());
-    for(int coin = 0;coin<n;coin++){
-        // coin shoulds always small than coins;
-        // because the data is sorted bro; 
-        if (arr[coin]> coins) {
-            cout<<coins<<endl;
-            return ; 
-        }
-        coins +=arr[coin];
-    }
-    cout<<coins<<endl;
-}
-
-
 
 
 
 int main() {
     file_out();
     /***//////////////////input space //////////////***/
-    int n ; 
-    cin>> n ; 
-    vector<ll> arr(n);
-    for (int i = 0 ; i<n;i++){
-        cin>>arr[i];
-    }
+    
+
+int n , m ; 
+cin >> n>>m ; 
+
+map<ll ,ll> mp;
+mp[0] = 1;
+ll prefix = 0;
+ll ans = 0;
+
+for (int i = 0;i<n;i++){
+    ll x; 
+    cin>> x;
+    prefix+=x;
+    
+    if (mp.find(prefix-m) != mp.end()) ans+=mp[prefix-m];
+    mp[prefix]++;
+
+}
+cout<<ans<<endl;
 
 
 
-
-    solution(n,arr);
-
+   
     
 return 0 ;
 }

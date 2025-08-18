@@ -61,7 +61,10 @@ void file_out(){
 //                              MAIN CODE                                     //
 ////////////////////////////////////////////////////////////////////////////////
 
-
+/*
+ here it is non overlapping prblm ;
+ simple just sort according to ending time ;
+*/
 
 
 void solution(int n , std::vector<pair<int,int>>&data){

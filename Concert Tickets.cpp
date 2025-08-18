@@ -61,8 +61,13 @@ void file_out(){
 //                              MAIN CODE                                     //
 ////////////////////////////////////////////////////////////////////////////////
 
+/*
+// soulution doc 
+try to assign minimum ticket as possible as possible 
+In future it we have more options 
 
 
+*/ 
 
 void solution(int n , int m , multiset<int> &tickets, vector<int> & prices){
 

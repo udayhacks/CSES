@@ -61,7 +61,14 @@ void file_out(){
 //   //                           MAIN CODE                          //       //
 ////////////////////////////////////////////////////////////////////////////////
 
+//solution doc
+// here sort apt and apl;
+// alot the room if he desired size is available (x+k,x-k,x->given size);
+// if ith appli cant take jth apt then i+1th applicant cant take j-1t apt;
+//Apartment too small j++ ;
+//  i++ ;Applicant wants too small  or apartment size is more for -> i switch to next appliant ;
 
+        
 
 bool fits(int desired, int available, int k) {
     return (available >= desired - k && available <= desired + k);
@@ -70,11 +77,12 @@ bool fits(int desired, int available, int k) {
 void solution(int n, int m, int k, vector<int> &apl, vector<int> &apt) {
     sort(apl.begin(), apl.end()); // Applicants
     sort(apt.begin(), apt.end()); // Apartments
-
+    
     int allotted = 0;
     int i = 0, j = 0;
     while (i < n && j < m) {
         if (fits(apl[i], apt[j], k)) {
+            //fits check apt size in apl+k to apl-k.
             allotted++;
             i++;
             j++;
@@ -83,7 +91,7 @@ void solution(int n, int m, int k, vector<int> &apl, vector<int> &apt) {
             j++; // Apartment too small
         } 
         else {
-            i++; // Applicant wants too small apartment
+            i++; // Applicant wants too small  or apartment size is more for -> i switch to next appliant 
         }
     }
     cout << allotted << nline;

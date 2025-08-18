@@ -61,7 +61,12 @@ void file_out(){
 //                              MAIN CODE                                     //
 ////////////////////////////////////////////////////////////////////////////////
 
+/*
+ here overlapping the range prbm 
+ so , sort the arrival and leaving value
+ count how many are people are there when some one leaving 
 
+*/
 
 
 void solution(int n , vector<int>&arrival, vector<int>& leave){

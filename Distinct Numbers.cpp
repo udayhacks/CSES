@@ -1,5 +1,4 @@
-
-//// CP tempalte////
+/// P tempalte////
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -59,6 +58,20 @@ void file_out(){
 ////////////////////////////////////////////////////////////////////////////////
 //                              MAIN CODE                                     //
 ////////////////////////////////////////////////////////////////////////////////
+
+
+// solution doc
+// here simplely sort the element 
+// check for different adjacent elements
+
+
+
+
+
+
+
+
+
 
 void solution(int n, vector<int> &arr) {
     /*
