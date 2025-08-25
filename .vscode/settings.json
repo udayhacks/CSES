@@ -60,6 +60,7 @@
     "*.dbclient-js": "javascript",
     "*.py": "python",
     "list": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "bitset": "cpp"
   }
 }
