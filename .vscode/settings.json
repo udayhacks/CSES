@@ -59,6 +59,7 @@
   "files.associations": {
     "*.dbclient-js": "javascript",
     "*.py": "python",
-    "list": "cpp"
+    "list": "cpp",
+    "ostream": "cpp"
   }
 }

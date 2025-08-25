@@ -65,41 +65,39 @@ void file_out(){
 
 
 
-void solution(){
-
-}
-
-
-
 
 
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    file_out();
+    /***//////////////////input space //////////////***/
+    
+    int n,m;
+    cin>>n>>m;
+    vector<int> coin (n);
+    vector<int> dp(m+1,INT_MAX);
+    
 
-    int n;
-    cin >> n;
-    vector<long long> arr(n);
-    for (int i = 0; i < n; i++) cin >> arr[i];
+    for (int i = 0;i<n;i++) cin>>coin[i];
+    sort(coin.begin(),coin.end(),greater<int>());
 
-    unordered_map<long long, int> freq;
-    long long count = 0;
-    int left = 0;
+    dp[0] = 0;
+   
 
-    for (int right = 0; right < n; right++) {
-        freq[arr[right]]++;
-
-        // shrink window until distinct
-        while (freq[arr[right]] > 1) {
-            freq[arr[left]]--;
-            left++;
+    for (int i = 1;i<=m;i++){
+        for(int j = 0;j<n;j++){
+            if (i-coin[j]>=0) {
+                dp[i] = min(dp[i],1+dp[i-coin[j]]);
+            }
+        
         }
-
-        // number of distinct subarrays ending at right
-        count += (right - left + 1);
     }
+     cout << (dp[m] == INT_MAX ? -1 : dp[m]) << "\n";
 
-    cout << count << "\n";
-    return 0;
+
+
+
+   
+    
+return 0 ;
 }
