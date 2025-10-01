@@ -1,4 +1,8 @@
-# Cp Pratices small routine 
+# [Cp Pratices small routine](https://cses.fi/problemset/list/) 
+
+
+
+
 
 ```
 
