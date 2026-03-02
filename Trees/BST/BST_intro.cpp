@@ -86,10 +86,12 @@ void algorithm() {
 
   int n ; 
   cin >> n ;
+  // here input number of nodes ;
   
   node *root = nullptr;
   
   for ( int i = 0;i<n;i++){
+    // take space-separated node as integers;
         int a ;cin >>a;
        root = insert(root,a); 
     }
