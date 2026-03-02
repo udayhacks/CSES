@@ -78,6 +78,21 @@ int checkBalance(node*root){
 
 }
 
+int diameter(node *root , int& d){
+  
+  if ( root == nullptr) return 0;
+  
+  int left = diameter(root->left,d);
+  int right = diameter(root->right,d);
+
+  d = max(left+right+1,d);
+  return 1+max(left,right);
+}
+
+bool is_balanced(node *root){
+  return (checkBalance(root) != -1);
+}
+
 
 
 
@@ -99,7 +114,11 @@ void algorithm() {
     print(root);
     cout<<'\n';
     cout<<"height is "<<height(root)<<endl;
-    cout<<checkBalance(root)<<endl;
+    (is_balanced(root)) ? cout<<"Is balanced"<<'\n' : cout<<"Not balanced" <<'\n';
+    int d= 0;
+    int val = diameter(root,d);
+    cout<<d<<'\n'; 
+
 
 
 
