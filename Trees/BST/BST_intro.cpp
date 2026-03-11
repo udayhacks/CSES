@@ -16,6 +16,12 @@ long long ceil_division(long long a, long long b) {
     return (a + b - 1) / b;
 }
 
+// tree ;
+// insert ;
+// height ;
+// // balanced ;
+// diameter ;
+
 
 
 
@@ -78,6 +84,9 @@ int checkBalance(node*root){
 
 }
 
+
+// diameter
+
 int diameter(node *root , int& d){
   
   if ( root == nullptr) return 0;
@@ -89,6 +98,9 @@ int diameter(node *root , int& d){
   return 1+max(left,right);
 }
 
+
+// balanced
+
 bool is_balanced(node *root){
   return (checkBalance(root) != -1);
 }
@@ -98,6 +110,10 @@ bool is_balanced(node *root){
 
 
 void algorithm() {
+
+
+
+
 
   int n ; 
   cin >> n ;
